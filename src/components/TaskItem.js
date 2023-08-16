@@ -1,74 +1,56 @@
-import React, { useState } from "react";
-import { updateTask, deleteTask } from "../api";
-import "./TaskItem.css";
-
-function TaskItem({ task, onTaskUpdated, onTaskDeleted }) {
-  const [isEditing, setIsEditing] = useState(false);
-  const [updatedTitle, setUpdatedTitle] = useState(task.title);
-  const [updatedDescription, setUpdatedDescription] = useState(task.description);
-
-  const handleEditToggle = () => {
-    setIsEditing(!isEditing);
-  };
-
-  const handleTaskUpdate = async () => {
-    const updatedTask = {
-      ...task,
-      title: updatedTitle,
-      description: updatedDescription,
-    };
-
-    await updateTask(updatedTask);
-    onTaskUpdated(task.id, updatedTask);
-    setIsEditing(false);
-  };
-
-  const handleTaskDelete = async () => {
-    await deleteTask(task.id);
-    onTaskDeleted(task.id);
-  };
-
-  return (
-    <li className="task-item">
-      {isEditing ? (
-        <div className="task-item-edit-form">
-          <input
-            type="text"
-            className="task-item-input"
-            value={updatedTitle}
-            onChange={(e) => setUpdatedTitle(e.target.value)}
-          />
-          <textarea
-            className="task-item-textarea"
-            value={updatedDescription}
-            onChange={(e) => setUpdatedDescription(e.target.value)}
-          />
-          <div className="task-item-actions">
-            <button className="task-item-save-button" onClick={handleTaskUpdate}>
-              Save
-            </button>
-            <button className="task-item-cancel-button" onClick={handleEditToggle}>
-              Cancel
-            </button>
-          </div>
-        </div>
-      ) : (
-        <div className="task-item-content">
-          <div className="task-item-title">{task.title}</div>
-          <div className="task-item-description">{task.description}</div>
-          <div className="task-item-due-date">Due: {task.dueDate}</div>
-          <div className="task-item-actions">
-            <button className="task-item-edit-button" onClick={handleEditToggle}>
-              Edit
-            </button>
-            <button className="task-item-delete-button" onClick={handleTaskDelete}>
-              Delete
-            </button>
-          </div>
-        </div>
-      )}
-    </li>
-  );
+.task-item {
+  padding: 16px;
+  margin: 12px 0;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
 }
 
-export default TaskItem;
+.task-item:hover {
+  background-color: #444444;
+}
+
+.task-item-content {
+  flex: 1;
+}
+
+.task-item-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.task-item-description {
+  color: #bbbbbb;
+  margin-bottom: 8px;
+}
+
+.task-item-due-date {
+  font-size: 0.9rem;
+  color: #999999;
+}
+
+.task-item-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.task-item-edit-button,
+.task-item-delete-button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.task-item-edit-button:hover,
+.task-item-delete-button:hover {
+  color: #0056b3;
+}

@@ -1,18 +1,33 @@
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
 .task-item {
-  /* ... (previous styles) */
   padding: 16px;
   margin: 12px 0;
-  transition: background-color 0.2s;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item-content {
+  flex: 1;
 }
 
 .task-item-title {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 4px;
+  color: #ffffff;
 }
 
 .task-item-description {
-  color: #555555;
+  color: #bbbbbb;
   margin-bottom: 8px;
 }
 
@@ -35,6 +50,7 @@
   cursor: pointer;
 }
 
+.task-item-edit-button:hover,
 .task-item-delete-button:hover {
-  color: #dc3545;
+  color: #0056b3;
 }

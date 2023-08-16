@@ -38,22 +38,26 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #252525;
+  color: #ffffff;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header {
   text-align: center;
   margin-bottom: 32px;
   padding: 20px 0;
-  background-color: #007bff;
+  background-color: #333333;
   color: #ffffff;
 }
