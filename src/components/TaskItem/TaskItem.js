@@ -1,5 +1,3 @@
-// src/components/TaskItem/TaskItem.js
-
 import React, { useState } from "react";
 import { updateTask, deleteTask } from "../api";
 import "./TaskItem.css"; // Import the CSS file
