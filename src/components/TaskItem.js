@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { updateTask } from "../api"; // Implement the updateTask function in api.js
+import { updateTask } from "../api";
 
 function TaskItem({ task, onTaskUpdated, onTaskDeleted }) {
   const [isEditing, setIsEditing] = useState(false);

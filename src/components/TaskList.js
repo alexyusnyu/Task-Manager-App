@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { fetchTasks } from "../api";
+import { fetchTasks, createTask, updateTask, deleteTask } from "../api"; // Make sure to import the required functions
 import TaskItem from "./TaskItem";
+import TaskForm from "./TaskForm"; // Import the TaskForm component
 import "./TaskList.css"; // Import the CSS file
 
 function TaskList() {
@@ -31,8 +32,8 @@ function TaskList() {
   };
 
   return (
-    <div>
-      <h1>Task List</h1>
+    <div className="task-list-container">
+      <h1 className="task-list-header">Task List</h1>
       <TaskForm onTaskAdded={handleTaskAdded} />
       <ul>
         {tasks.map((task) => (
