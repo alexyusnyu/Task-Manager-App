@@ -21,9 +21,11 @@ function TaskList() {
   return (
     <div className="task-list">
       <h2>Task List</h2>
-      {tasks.map((task) => (
-        <TaskItem key={task.id} task={task} />
-      ))}
+      {tasks.length === 0 ? (
+        <p>No tasks available.</p>
+      ) : (
+        tasks.map((task) => <TaskItem key={task.id} task={task} />)
+      )}
     </div>
   );
 }

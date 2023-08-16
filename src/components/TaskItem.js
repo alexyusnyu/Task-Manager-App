@@ -5,7 +5,7 @@ import './TaskItem.css';
 
 function TaskItem({ task }) {
   return (
-    <div className="task-item">
+    <div className={`task-item ${task.completed ? 'completed' : ''}`}>
       <h3 className="task-title">{task.title}</h3>
       <p className="task-description">{task.description}</p>
       <p className="task-due-date">Due Date: {task.due_date}</p>
@@ -13,9 +13,7 @@ function TaskItem({ task }) {
         <p className={`task-priority priority-${task.priority}`}>
           Priority: {task.priority}
         </p>
-        <p className={`task-status ${task.completed ? 'completed' : 'not-completed'}`}>
-          {task.completed ? 'Completed' : 'Not Completed'}
-        </p>
+        <p className="task-status">{task.completed ? 'Completed' : 'Not Completed'}</p>
       </div>
     </div>
   );
