@@ -1,0 +1,70 @@
+/* src/components/TaskApp.css */
+
+.task-app {
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* src/components/TaskForm.css */
+
+.task-form {
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* src/components/TaskList.css */
+
+.task-list {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* src/components/TaskItem.css */
+
+.task-item {
+  padding: 16px;
+  margin: 12px 0;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+  border: 1px solid #a0d468;
+}
+
+.task-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.task-description {
+  color: #777777;
+  margin-bottom: 8px;
+}
+
+.task-due-date {
+  color: #999999;
+  margin-bottom: 8px;
+}
+
+.task-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-priority {
+  font-weight: bold;
+}
+
+.task-status {
+  color: #888888;
+}

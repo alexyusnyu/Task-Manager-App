@@ -1,14 +1,11 @@
-import React from "react";
-import "./App.css";
-import TaskList from "./components/TaskList";
+import React from 'react';
+import TaskApp from './components/TaskApp';
+import './App.css';
 
 function App() {
   return (
-    <div className="container">
-      <header className="header">
-        <h1>Task Manager App</h1>
-      </header>
-      <TaskList />
+    <div className="app">
+      <TaskApp />
     </div>
   );
 }
