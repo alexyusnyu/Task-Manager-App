@@ -1,19 +1,38 @@
-const BASE_URL = "http://localhost:3000/api/v1";
+const API_BASE_URL = "http://localhost:3001/api/v1"; // Adjust the URL accordingly
 
-export const fetchTasks = async () => {
-  const response = await fetch(`${BASE_URL}/tasks`);
+export async function fetchTasks() {
+  const response = await fetch(`${API_BASE_URL}/tasks`);
   const data = await response.json();
   return data;
-};
+}
 
-export const createTask = async (task) => {
-  const response = await fetch(`${BASE_URL}/tasks`, {
+export async function createTask(task) {
+  const response = await fetch(`${API_BASE_URL}/tasks`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ task }),
+    body: JSON.stringify(task),
   });
   const data = await response.json();
   return data;
-};
+}
+
+export async function updateTask(task) {
+  const response = await fetch(`${API_BASE_URL}/tasks/${task.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(task),
+  });
+  const data = await response.json();
+  return data;
+}
+
+export async function deleteTask(taskId) {
+  const response = await fetch(`${API_BASE_URL}/tasks/${taskId}`, {
+    method: "DELETE",
+  });
+  return response.ok;
+}
