@@ -2,6 +2,9 @@
 
 A minimalist Task Manager application built with Ruby on Rails and React, allowing you to effortlessly manage your tasks.
 
+
+![Task Manager App Screenshot](screenshot.png)
+
 ## Features
 
 - Add new tasks with titles, descriptions, and due dates.
