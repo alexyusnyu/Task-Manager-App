@@ -8,25 +8,22 @@ function TaskForm() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (title.trim() === '') {
-      return;
-    }
+    if (!title.trim()) return;
 
     const newTask = {
       title,
       description,
     };
 
-    createTask(newTask)
-      .then(() => {
-        setTitle('');
-        setDescription('');
-      })
-      .catch((error) => {
-        console.error('Error creating task:', error);
-      });
+    try {
+      await createTask(newTask);
+      setTitle('');
+      setDescription('');
+    } catch (error) {
+      console.error('Error creating task:', error);
+    }
   };
 
   return (
