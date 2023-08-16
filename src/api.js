@@ -17,5 +17,3 @@ export const createTask = async (task) => {
   const data = await response.json();
   return data;
 };
-
-// Add updateTask and deleteTask functions as needed
