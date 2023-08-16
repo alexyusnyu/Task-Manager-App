@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchTasks } from "../api";
+import TaskItem from "./TaskItem";
+import "./TaskList.css"; // Import the CSS file
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
@@ -12,8 +14,12 @@ function TaskList() {
     setTasks([...tasks, newTask]);
   };
 
-  const handleTaskUpdated = (taskId, updatedTask) => {
+  const handleTaskUpdated = async (taskId, updatedTask) => {
+    // Update task on the UI
     setTasks(tasks.map((task) => (task.id === taskId ? updatedTask : task)));
+
+    // Update task on the API
+    await updateTask(updatedTask);
   };
 
   const handleTaskDeleted = async (taskId) => {
@@ -21,7 +27,7 @@ function TaskList() {
     setTasks(tasks.filter((task) => task.id !== taskId));
 
     // Delete task from API
-    // Implement the deleteTask function in api.js
+    await deleteTask(taskId);
   };
 
   return (
