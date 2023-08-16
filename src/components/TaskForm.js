@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createTask } from "../api";
-import "./TaskForm.css"; 
+import "./TaskForm.css";
 
 function TaskForm({ onTaskAdded }) {
   const [title, setTitle] = useState("");
