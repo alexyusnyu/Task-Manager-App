@@ -12,6 +12,10 @@ function TaskList() {
     setTasks([...tasks, newTask]);
   };
 
+  const handleTaskUpdated = (taskId, updatedTask) => {
+    setTasks(tasks.map((task) => (task.id === taskId ? updatedTask : task)));
+  };
+
   const handleTaskDeleted = async (taskId) => {
     // Remove task from UI
     setTasks(tasks.filter((task) => task.id !== taskId));
@@ -26,10 +30,12 @@ function TaskList() {
       <TaskForm onTaskAdded={handleTaskAdded} />
       <ul>
         {tasks.map((task) => (
-          <li key={task.id}>
-            {task.title}
-            <button onClick={() => handleTaskDeleted(task.id)}>Delete</button>
-          </li>
+          <TaskItem
+            key={task.id}
+            task={task}
+            onTaskUpdated={handleTaskUpdated}
+            onTaskDeleted={handleTaskDeleted}
+          />
         ))}
       </ul>
     </div>
