@@ -13,3 +13,112 @@ Migrating to CreateTasks (20230815210051)
   [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/main.df703750dc525798e8b2.hot-update.json" for ::1 at 2023-08-16 15:40:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/main.df703750dc525798e8b2.hot-update.json"):
+  
+Started GET "/%PUBLIC_URL%/favicon.ico" for ::1 at 2023-08-16 15:40:22 +0300
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:40:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/favicon.ico"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:40:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:40:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:41:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:41:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:41:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:41:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:41:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:41:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:41:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2023-08-16 15:42:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  

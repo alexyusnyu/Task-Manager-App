@@ -1,37 +1,23 @@
-import React, { useState } from "react";
-import { updateTask, deleteTask } from "../api";
-import "./TaskItem.css"; // Import the CSS file
+// src/components/TaskItem.js
 
-function TaskItem({ task, onTaskUpdated, onTaskDeleted }) {
-  const [isEditing, setIsEditing] = useState(false);
-  const [updatedTitle, setUpdatedTitle] = useState(task.title);
-  const [updatedDescription, setUpdatedDescription] = useState(task.description);
+import React from 'react';
+import './TaskItem.css';
 
-  const handleEditToggle = () => {
-    setIsEditing(!isEditing);
-  };
-
-  const handleTaskUpdate = async () => {
-    const updatedTask = {
-      ...task,
-      title: updatedTitle,
-      description: updatedDescription,
-    };
-
-    await updateTask(updatedTask);
-    onTaskUpdated(task.id, updatedTask);
-    setIsEditing(false);
-  };
-
-  const handleTaskDelete = async () => {
-    await deleteTask(task.id);
-    onTaskDeleted(task.id);
-  };
-
+function TaskItem({ task }) {
   return (
-    <li className="task-item">
-      {/* ... rest of your component */}
-    </li>
+    <div className="task-item">
+      <h3 className="task-title">{task.title}</h3>
+      <p className="task-description">{task.description}</p>
+      <p className="task-due-date">Due Date: {task.due_date}</p>
+      <div className="task-details">
+        <p className={`task-priority priority-${task.priority}`}>
+          Priority: {task.priority}
+        </p>
+        <p className={`task-status ${task.completed ? 'completed' : 'not-completed'}`}>
+          {task.completed ? 'Completed' : 'Not Completed'}
+        </p>
+      </div>
+    </div>
   );
 }
 

@@ -1,57 +1,54 @@
-import React, { useState } from "react";
-import { createTask } from "../api";
-import "./TaskForm.css";
+// src/components/TaskForm.js
 
-function TaskForm({ onTaskAdded }) {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [dueDate, setDueDate] = useState("");
+import React, { useState } from 'react';
+import { createTask } from '../api';
+import './TaskForm.css';
 
-  const handleTaskSubmit = async (e) => {
+function TaskForm() {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!title) return;
+    if (title.trim() === '') {
+      return;
+    }
 
     const newTask = {
       title,
       description,
-      dueDate,
     };
 
-    const createdTask = await createTask(newTask);
-    onTaskAdded(createdTask);
-
-    setTitle("");
-    setDescription("");
-    setDueDate("");
+    createTask(newTask)
+      .then(() => {
+        setTitle('');
+        setDescription('');
+      })
+      .catch((error) => {
+        console.error('Error creating task:', error);
+      });
   };
 
   return (
     <div className="task-form">
-      <h2 className="task-form-title">Add New Task</h2>
-      <form onSubmit={handleTaskSubmit}>
+      <h2>Add New Task</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="title">Title:</label>
         <input
           type="text"
-          placeholder="Title"
-          className="task-form-input"
+          id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          placeholder="Enter task title"
         />
+        <label htmlFor="description">Description:</label>
         <textarea
-          placeholder="Description"
-          className="task-form-input"
+          id="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          placeholder="Enter task description"
         />
-        <input
-          type="date"
-          className="task-form-input"
-          value={dueDate}
-          onChange={(e) => setDueDate(e.target.value)}
-        />
-        <button type="submit" className="task-form-button">
-          Add Task
-        </button>
+        <button type="submit">Add Task</button>
       </form>
     </div>
   );
