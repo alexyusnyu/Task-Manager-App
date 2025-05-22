@@ -37,8 +37,5 @@ A minimalist Task Manager application built with Ruby on Rails and React, allowi
 
 4. Open http://localhost:3000 in your browser.
 
-## Contributing
-Contributions are welcome! Feel free to submit a pull request for bug fixes or enhancements.
-
 ## License
 This project is licensed under the MIT License.
